@@ -14,9 +14,7 @@
     <remote name="github"
         fetch="https://github.com" />
 
-    <project path="build" name="platform/build" groups="pdk,tradefed" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
+  <!-- AOSP -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
@@ -548,5 +546,11 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+   
+   <!-- Skunkworkx OS -->
+    <project path="build" name="android_build" groups="pdk" remote="skunk" revision="ng7.1" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+    </project>
+    <project path="build/kati" name="android_build_kati" remote="skunk" revision="ng7.1" />
 
 </manifest>
