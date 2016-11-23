@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp"
-           fetch=".." />
-  <default revision="refs/tags/android-7.1.0_r7"
-           remote="aosp"
-           sync-j="4" />
+   <remote name="aosp"
+        fetch="https://android.googlesource.com"
+        review="android-review.googlesource.com" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+    <default revision="refs/tags/android-7.1.0_r7" remote="aosp" sync-j="16" />
+
+    <remote name="skunk"
+        fetch="https://github.com/skunkworkx"
+        sync-j="16"/>
+
+    <remote name="github"
+        fetch="https://github.com" />
+
+    <project path="build" name="platform/build" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
