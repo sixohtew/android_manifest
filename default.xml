@@ -536,4 +536,5 @@
     <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="skunk" revision="ng7.1" />
     <project path="system/core" name="android_system_core" remote="skunk" revision="ng7.1" />
     <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="skunk" revision="ng7.1" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="skunk" revision="ng7.1" />
 </manifest>
